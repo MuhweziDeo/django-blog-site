@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,6 +8,8 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <!-- Bootstrap CSS -->
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin ="anonymous">
+            <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css'%}">
+
             {% if title%}
                 <title>{{title}}</title>
                 {%else%}
@@ -35,7 +38,7 @@
                         </div>
                     </nav>
                 </header>
-                
+
                 <main role="main" class="container">
                     <div class="row">
                         <div class="col-md-8">
