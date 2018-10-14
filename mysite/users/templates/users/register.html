@@ -1,8 +1,8 @@
 {%extends "blog/base.html" %}
 {%block content%}
  <div class="content-section">
-     <form action="" method="POST">
-         {%csrf_token %}
+     <form  method="POST">
+         {% csrf_token %}
          <fieldset class="form-group">
             <legend class="border-bottom mb-4">Join Today</legend>
             {{form.as_p}}
@@ -10,9 +10,9 @@
          </fieldset>
 
          <div class="form-group">
-             <div class="btn btn-outline-info" type="submit">
+             <button class="btn btn-outline-info" type="submit">
                  Signup
-             </div>
+             </button>
          </div>
 
      </form>
