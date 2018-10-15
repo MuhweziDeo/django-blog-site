@@ -3,14 +3,18 @@ from .models import Post
 from django.views.generic import ListView
 # Create your views here.
 posts=Post.objects.all()
-def home(request):
-    context = {
-        'posts': posts
-    }
-    return render(request, 'blog/home.html', context)
+# def home(request):
+#     context = {
+#         'posts': posts
+#     }
+#     return render(request, 'blog/home.html', context)
 
 
 def about(request):
     return render(request, 'blog/about.html',{'title':'About'})
+
 class PostListView(ListView):
     model=Post
+    template_name='blog/home.html'
+    context_object_name='posts'
+    ordering=['date_posted']
